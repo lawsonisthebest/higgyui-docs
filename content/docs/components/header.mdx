@@ -1,0 +1,43 @@
+---
+title: Header
+description: "Responsive site navigation with optional branding and a mobile menu."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="header" />
+
+## Usage
+
+```tsx
+import { Header } from "higgyui";
+import { Layers } from "lucide-react";
+
+export function Example() {
+  return (
+    <Header
+      title="Studio"
+      logo={Layers}
+      sticky={false}
+      items={[
+        { title: "Overview", active: true },
+        { title: "Projects" },
+      ]}
+    />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `title / logo` | `string / LucideIcon` | Brand label and optional logo icon. |
+| `items` | `HeaderItem[]` | Items accept title, icon, href, onClick, and active. |
+| `titlePosition / itemsPosition` | `"left", "center", or "right"` | Default to left and right, respectively. |
+| `sticky` | `boolean` | Sticks to the top by default. |
+| `className` | `string` | Extra classes on the header. |
+
+Provide `href` for links and `onClick` for action items. Use `active` for the current page.

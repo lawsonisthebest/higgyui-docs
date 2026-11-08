@@ -1,0 +1,46 @@
+---
+title: Styling and composition
+description: Customize HiggyUI’s appearance and connect its components to your application.
+icon: SlidersHorizontal
+---
+
+## Customize an instance
+
+Most components accept `className`. Use it for width, spacing, and other layout adjustments. Check the reference page for where the class is applied. For example, Input applies it to the input itself, while Switch applies it to its outer wrapper.
+
+```tsx
+import { Badge, Card, Input } from "higgyui";
+
+export function ProjectDetails() {
+  return (
+    <Card
+      className="max-w-md"
+      title="Project details"
+      footer={<Badge variant="muted">Draft</Badge>}
+    >
+      <Input label="Project name" name="project" placeholder="Studio redesign" />
+    </Card>
+  );
+}
+```
+
+[Button](/docs/components/button) exposes icon size, position, stroke width, and a hover animation. [IconButton](/docs/components/icon-button) also accepts native button props and needs an accessible `label`.
+
+## Use the styles with Tailwind CSS 4
+
+You can import `higgyui/styles.css` as described in [Installation](/docs/installation). If your own stylesheet already imports Tailwind and you want it to generate the library utilities, add an explicit source pointing at the installed JavaScript bundle. Adjust the relative path for the location of your CSS file.
+
+```css
+@import "tailwindcss";
+@source "../node_modules/higgyui/dist/ui.es.js";
+```
+
+## Wire up interactive components
+
+Use native `defaultValue` or `defaultChecked` to set an initial value. For controlled fields, pair `value` or `checked` with `onChange`. [Tabs](/docs/components/tabs) and [RadioGroup](/docs/components/radio-group) use `onValueChange`. [Pagination](/docs/components/pagination) calls `onPageChange` and receives the current page through `page`.
+
+In Next.js App Router, put examples that use hooks, event handlers, or Lucide icon component props in a client component.
+
+## Label your controls
+
+Give form controls visible labels and icon-only buttons descriptive names. Keep labels specific to the action, such as “Open settings” or “Remove project.” Use the field's `description` or `error` prop to connect supporting text to the control.

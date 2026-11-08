@@ -1,0 +1,30 @@
+---
+title: Textarea
+description: "A multiline field for notes and longer responses."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="textarea" />
+
+## Usage
+
+```tsx
+import { Textarea } from "higgyui";
+
+export function Example() {
+  return (
+    <Textarea label="Project notes" name="notes" placeholder="Add a note" rows={4} />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Visible field label. Required. |
+| `description / error` | `string` | Supporting or validation text. |
+| `Native textarea props` | `ComponentProps` | Supports rows, name, value, defaultValue, onChange, and disabled. |

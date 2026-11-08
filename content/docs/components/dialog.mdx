@@ -1,0 +1,39 @@
+---
+title: Dialog
+description: "A native modal opened by a labeled trigger button."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="dialog" />
+
+## Usage
+
+```tsx
+import { Dialog } from "higgyui";
+
+export function Example() {
+  return (
+    <Dialog
+      triggerLabel="View details"
+      title="Project information"
+      description="A quick look at this project."
+    >
+      This project is visible to your team.
+    </Dialog>
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `triggerLabel / title` | `string` | Visible trigger text and dialog title. Required. |
+| `description` | `string` | Optional supporting text. |
+| `children / footer` | `ReactNode` | Body and optional footer content. |
+| `Native dialog props` | `ComponentProps` | Supports events like onClose and onCancel. The component manages opening. |
+
+Press Escape or select the close button to dismiss the dialog.

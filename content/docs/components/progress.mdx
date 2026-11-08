@@ -1,0 +1,30 @@
+---
+title: Progress
+description: "A progress bar for determinate or indeterminate work."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="progress" />
+
+## Usage
+
+```tsx
+import { Progress } from "higgyui";
+
+export function Example() {
+  return (
+    <Progress label="Upload progress" value={65} max={100} />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Accessible progress label. |
+| `value / max` | `number` | Current amount and upper bound. Omit value for indeterminate progress. |
+| `className` | `string` | Extra classes on the progress element. |

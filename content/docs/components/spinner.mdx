@@ -1,0 +1,29 @@
+---
+title: Spinner
+description: "A compact loading indicator with a screen-reader label."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="spinner" />
+
+## Usage
+
+```tsx
+import { Spinner } from "higgyui";
+
+export function Example() {
+  return (
+    <Spinner label="Loading projects" size={24} />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Status text for assistive technology. Defaults to Loading. |
+| `size` | `number` | Icon size in pixels. Defaults to 19. |

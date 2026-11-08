@@ -1,0 +1,37 @@
+---
+title: RadioGroup
+description: "A labeled set of mutually exclusive choices."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="radio-group" />
+
+## Usage
+
+```tsx
+import { RadioGroup } from "higgyui";
+
+export function Example() {
+  return (
+    <RadioGroup label="Email frequency" name="frequency" defaultValue="weekly" options={[
+      { value: "daily", label: "Daily" },
+      { value: "weekly", label: "Weekly" },
+      { value: "never", label: "Never" },
+    ]} />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label / name` | `string` | Visible legend and optional form field name. |
+| `options` | `{ value, label, disabled? }[]` | Available radio choices. |
+| `value / defaultValue` | `string` | Selected value for controlled or uncontrolled use. |
+| `onValueChange` | `(value: string) => void` | Runs when an option is selected. |
+| `orientation` | `"vertical" or "horizontal"` | Defaults to vertical. |
+| `required / disabled` | `boolean` | Native form validation and disabled state. |

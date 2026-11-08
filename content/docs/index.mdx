@@ -1,13 +1,33 @@
 ---
-title: Hello World
-description: Your first document
+title: Introduction
+description: Build a React interface with HiggyUI and learn your way around the component library.
+icon: BookOpen
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+HiggyUI gives React apps a set of components with white surfaces, neutral borders, rounded corners, and thin Lucide icons. Use them individually or combine them to build a form, settings screen, or workspace.
 
-## What is Next?
+## Start here
 
 <Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
+  <Card title="Installation" href="/docs/installation" description="Download the package, import its stylesheet, and render a button." />
+  <Card title="Component library" href="/docs/components" description="Browse the full library with live examples, copyable code, and prop references." />
+  <Card title="Styling and composition" href="/docs/styling" description="Adjust component styles, supply icons, and connect interactive components to React state." />
 </Cards>
+
+## A first component
+
+Once HiggyUI and its stylesheet are installed, import components by name.
+
+```tsx
+import { Button, Card } from "higgyui";
+
+export function ProjectSummary() {
+  return (
+    <Card title="Project summary" description="A workspace for your team.">
+      <Button title="View project" hoverAnimation />
+    </Card>
+  );
+}
+```
+
+Most form controls accept standard React DOM props such as `name`, `required`, and `disabled`. Each component page explains its additional settings.

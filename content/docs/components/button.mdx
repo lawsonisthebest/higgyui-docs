@@ -1,0 +1,35 @@
+---
+title: Button
+description: "A compact text button with optional icon and hover animation."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="button" />
+
+## Usage
+
+```tsx
+import { Button } from "higgyui";
+import { Save } from "lucide-react";
+
+export function Example() {
+  return (
+    <Button title="Save changes" icon={Save} hoverAnimation />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `title` | `string` | The visible label. Required. |
+| `hoverAnimation` | `boolean` | Adds the opacity and shadow transition on hover. |
+| `icon` | `LucideIcon` | Icon component to display. |
+| `iconPosition` | `"left" or "right"` | Defaults to right. |
+| `iconSize / iconThickness` | `number` | Default to 19 px and 1.5. |
+
+Use IconButton for an icon-only action. Button currently exposes appearance props; it does not forward native button props such as `onClick`.

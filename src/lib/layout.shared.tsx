@@ -1,12 +1,13 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import { appName, gitConfig } from './shared';
+import { Brand } from '@/components/brand';
 
 export function baseOptions(): BaseLayoutProps {
   return {
-    nav: {
-      // JSX supported
-      title: appName,
-    },
-    githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
+    nav: { title: <Brand /> },
+    githubUrl: 'https://github.com/lawsonisthebest/higgyui',
+    links: [
+      { text: 'Get started', url: '/docs/installation' },
+      { text: 'Components', url: '/docs/components', active: 'nested-url' },
+    ],
   };
 }

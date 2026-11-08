@@ -1,0 +1,59 @@
+---
+title: Installation
+description: Download HiggyUI, install it in a React project, and load the bundled styles.
+icon: Download
+---
+
+import { publicPath } from "@/lib/shared";
+
+## Download the package
+
+The download contains the built HiggyUI package, including its JavaScript, TypeScript declarations, and stylesheet.
+
+<a className="docs-download not-prose" href={publicPath("/downloads/higgyui.tgz")} download>Download higgyui.tgz <span aria-hidden="true">↓</span></a>
+
+Move the downloaded file to your app's root directory and run:
+
+```bash
+npm install ./higgyui.tgz
+```
+
+HiggyUI expects React and React DOM 19.2.8 or a later compatible 19.x release. Its Lucide dependency is installed with the package.
+
+## Import the stylesheet
+
+Load the prebuilt stylesheet once in your application entry point. In Next.js App Router, use the root layout. In Vite, use `src/main.tsx`.
+
+```tsx
+import "higgyui/styles.css";
+```
+
+The prebuilt stylesheet includes Tailwind's base styles. If your app already uses Tailwind CSS 4 and you prefer a single reset, see [Styling and composition](/docs/styling).
+
+## Render a component
+
+```tsx
+import { Button } from "higgyui";
+
+export default function App() {
+  return <Button title="Get started" hoverAnimation />;
+}
+```
+
+## Install from source
+
+If you have a HiggyUI checkout, build and pack it from the library folder.
+
+```bash
+npm ci
+npm run build
+npm pack
+```
+
+Install the resulting archive from your app folder. Replace the path and filename with the ones printed by `npm pack`.
+
+```bash
+npm install ../higgyui/higgyui-0.0.0.tgz
+```
+
+For ongoing local development, you can install the checkout itself with `npm install ../higgyui`. Rebuild the library when its source changes.

@@ -1,0 +1,29 @@
+---
+title: Badge
+description: "A small label for status, categories, or short metadata."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="badge" />
+
+## Usage
+
+```tsx
+import { Badge } from "higgyui";
+
+export function Example() {
+  return (
+    <Badge variant="muted">In review</Badge>
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `children` | `ReactNode` | Visible badge content. |
+| `variant` | `"outline", "muted", or "solid"` | Defaults to outline. |

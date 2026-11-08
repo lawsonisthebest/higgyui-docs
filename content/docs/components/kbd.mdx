@@ -1,0 +1,33 @@
+---
+title: Kbd
+description: "An inline keycap for displaying keyboard shortcuts."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="kbd" />
+
+## Usage
+
+```tsx
+import { Kbd } from "higgyui";
+
+export function Example() {
+  return (
+    <span className="flex items-center gap-1">
+      <Kbd>Ctrl</Kbd><span aria-hidden="true">+</span><Kbd>K</Kbd>
+    </span>
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `children` | `ReactNode` | Key label. |
+| `className` | `string` | Extra classes on the kbd element. |
+
+Use a separate Kbd for each key in a shortcut.

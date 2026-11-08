@@ -1,0 +1,30 @@
+---
+title: Switch
+description: "A compact on/off control for a setting."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="switch" />
+
+## Usage
+
+```tsx
+import { Switch } from "higgyui";
+
+export function Example() {
+  return (
+    <Switch label="Weekly summary" name="summary" description="Receive a recap of workspace activity." defaultChecked />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Visible switch label. Required. |
+| `description` | `string` | Supporting text connected to the switch. |
+| `Native input props` | `ComponentProps` | Supports name, checked, defaultChecked, onChange, and disabled. className applies to the wrapper. |

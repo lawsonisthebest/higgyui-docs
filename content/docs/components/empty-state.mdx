@@ -1,0 +1,33 @@
+---
+title: EmptyState
+description: "A placeholder with optional icon and next action."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="empty-state" />
+
+## Usage
+
+```tsx
+import { EmptyState } from "higgyui";
+import { Folder } from "lucide-react";
+
+export function Example() {
+  return (
+    <EmptyState title="No projects yet" icon={Folder}
+      description="Projects you create will show up here."
+    />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `title` | `ReactNode` | Visible heading. Required. |
+| `description / action` | `ReactNode` | Supporting text and an optional action element. |
+| `icon` | `LucideIcon` | Optional icon component. |

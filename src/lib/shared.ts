@@ -1,16 +1,13 @@
 import { createGetUrl } from 'fumadocs-core/source';
 
-export const appName = 'My App';
+export const appName = 'HiggyUI';
 export const docsRoute = '/docs';
+
+export function publicPath(path: string) {
+  return (process.env.NEXT_PUBLIC_BASE_PATH ?? '') + path;
+}
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';
-
-// fill this with your actual GitHub info, for example:
-export const gitConfig = {
-  user: 'fuma-nama',
-  repo: 'fumadocs',
-  branch: 'main',
-};
 
 const getContentUrl = createGetUrl(docsContentRoute);
 

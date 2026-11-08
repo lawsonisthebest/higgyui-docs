@@ -1,0 +1,32 @@
+---
+title: Pagination
+description: "Previous and next controls with the current page count."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="pagination" />
+
+## Usage
+
+```tsx
+import { useState } from "react";
+import { Pagination } from "higgyui";
+
+export function Example() {
+  const [page, setPage] = useState(1);
+  return <Pagination page={page} pageCount={5} onPageChange={setPage} />;
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `page` | `number` | Current one-based page. |
+| `pageCount` | `number` | Total pages. Zero hides the control. |
+| `onPageChange` | `(page: number) => void` | Update the current page in response to navigation. |
+
+Use the updated page to fetch or display the relevant slice of data.

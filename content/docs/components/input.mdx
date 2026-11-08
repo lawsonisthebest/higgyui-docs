@@ -1,0 +1,30 @@
+---
+title: Input
+description: "A single-line text field with a visible label."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="input" />
+
+## Usage
+
+```tsx
+import { Input } from "higgyui";
+
+export function Example() {
+  return (
+    <Input label="Project name" name="project" placeholder="Studio redesign" description="Shown in your workspace." />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Visible field label. Required. |
+| `description / error` | `string` | Supporting text. An error takes precedence and marks the field invalid. |
+| `Native input props` | `ComponentProps` | Supports type, name, value, defaultValue, onChange, required, and disabled. |

@@ -1,0 +1,30 @@
+---
+title: Slider
+description: "A range input for choosing a numeric value."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="slider" />
+
+## Usage
+
+```tsx
+import { Slider } from "higgyui";
+
+export function Example() {
+  return (
+    <Slider label="Volume" name="volume" min={0} max={100} step={5} defaultValue={60} />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Visible range label. Required. |
+| `description / error` | `string` | Supporting or validation text. |
+| `Native input props` | `ComponentProps` | Supports min, max, step, value, defaultValue, onChange, and disabled. |

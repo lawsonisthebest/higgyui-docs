@@ -1,0 +1,34 @@
+---
+title: Breadcrumbs
+description: "A hierarchy of links that leads to the current page."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="breadcrumbs" />
+
+## Usage
+
+```tsx
+import { Breadcrumbs } from "higgyui";
+
+export function Example() {
+  return (
+    <Breadcrumbs items={[
+      { title: "Workspace", href: "/docs" },
+      { title: "Components", href: "/docs/components" },
+      { title: "Breadcrumbs" },
+    ]} />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `items` | `{ title, href? }[]` | Items in order from the root to the current page. |
+
+The final item is marked as the current page. Breadcrumbs accepts native nav props.

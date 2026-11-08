@@ -1,0 +1,36 @@
+---
+title: Accordion
+description: "Expandable sections for related questions or details."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="accordion" />
+
+## Usage
+
+```tsx
+import { Accordion } from "higgyui";
+
+export function Example() {
+  return (
+    <Accordion
+      defaultOpen="access"
+      items={[
+        { id: "access", title: "Who has access?", content: "Members of this workspace." },
+        { id: "invite", title: "How do I invite someone?", content: "Ask a workspace owner." },
+      ]}
+    />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `items` | `{ id, title, content }[]` | Sections with a stable ID, summary, and body. |
+| `defaultOpen` | `string` | ID of the section to open initially. |
+| `multiple` | `boolean` | Allows several open sections. Defaults to false. |

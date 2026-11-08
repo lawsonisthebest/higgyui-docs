@@ -1,0 +1,33 @@
+---
+title: Separator
+description: "A subtle divider between groups of content."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="separator" />
+
+## Usage
+
+```tsx
+import { Separator } from "higgyui";
+
+export function Example() {
+  return (
+    <div className="grid gap-3">
+      <span>Project details</span>
+      <Separator />
+      <span>Workspace settings</span>
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `orientation` | `"horizontal" or "vertical"` | Defaults to horizontal. Place a vertical separator in a flex container with height. |
+| `decorative` | `boolean` | Suppresses separator semantics for purely visual divisions. |

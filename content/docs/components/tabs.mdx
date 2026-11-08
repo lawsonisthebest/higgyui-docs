@@ -1,0 +1,36 @@
+---
+title: Tabs
+description: "Switch between related panels without leaving the page."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="tabs" />
+
+## Usage
+
+```tsx
+import { Tabs } from "higgyui";
+
+export function Example() {
+  return (
+    <Tabs label="Project settings" items={[
+      { id: "general", title: "General", content: "Manage your project details." },
+      { id: "members", title: "Members", content: "See who can access the project." },
+    ]} />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Accessible name for the tab list. |
+| `items` | `{ id, title, content, disabled? }[]` | Each item needs a stable ID. |
+| `value / defaultValue` | `string` | Selected ID for controlled or uncontrolled use. |
+| `onValueChange` | `(id: string) => void` | Runs when the selected tab changes. |
+
+Use arrow keys, Home, or End to move between enabled tabs.

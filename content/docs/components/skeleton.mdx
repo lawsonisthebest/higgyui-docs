@@ -1,0 +1,34 @@
+---
+title: Skeleton
+description: "A neutral placeholder for content that is loading."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="skeleton" />
+
+## Usage
+
+```tsx
+import { Skeleton } from "higgyui";
+
+export function Example() {
+  return (
+    <div className="grid gap-2">
+      <Skeleton className="max-w-48" />
+      <Skeleton className="max-w-32" />
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `animated` | `boolean` | Pulses unless reduced motion is preferred. Defaults to true. |
+| `className` | `string` | Set a size that matches the expected content. |
+
+Skeleton is hidden from assistive technology. If the wait matters, communicate loading in the surrounding UI.

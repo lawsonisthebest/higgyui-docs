@@ -1,0 +1,37 @@
+---
+title: Table
+description: "A semantic table for structured records."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="table" />
+
+## Usage
+
+```tsx
+import { Table } from "higgyui";
+
+export function Example() {
+  return (
+    <Table caption="Workspace projects"
+      columns={[{ id: "name", title: "Project" }, { id: "status", title: "Status", align: "right" }]}
+      rows={[
+        { id: "ui", cells: { name: "HiggyUI", status: "In progress" } },
+        { id: "docs", cells: { name: "Documentation", status: "In review" } },
+      ]}
+    />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `caption` | `string` | Accessible table name. |
+| `columns` | `{ id, title, align? }[]` | Column definitions. Align left or right. |
+| `rows` | `{ id, cells }[]` | Each cells object maps column IDs to React content. |
+| `emptyMessage` | `string` | Text shown when rows is empty. Defaults to No results. |

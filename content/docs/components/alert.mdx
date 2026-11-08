@@ -1,0 +1,35 @@
+---
+title: Alert
+description: "An inline notice with an optional dismiss action."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="alert" />
+
+## Usage
+
+```tsx
+import { Alert } from "higgyui";
+
+export function Example() {
+  return (
+    <Alert title="Workspace updated" variant="info">
+      Your settings were saved.
+    </Alert>
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `title` | `ReactNode` | Notice heading. Required. |
+| `children` | `ReactNode` | Supporting content. |
+| `variant` | `"info" or "warning"` | Changes the icon. Defaults to info. |
+| `onDismiss` | `() => void` | Shows a dismiss button. Hide the alert from the callback. |
+
+For announcements triggered by an action, use an appropriate live region or pass a role when the message needs immediate attention.

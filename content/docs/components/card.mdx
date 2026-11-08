@@ -1,0 +1,32 @@
+---
+title: Card
+description: "A bordered surface with optional heading, body, and footer."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="card" />
+
+## Usage
+
+```tsx
+import { Card, Badge } from "higgyui";
+
+export function Example() {
+  return (
+    <Card title="Project settings" description="Manage your workspace." footer={<Badge variant="muted">Draft</Badge>}>
+      Changes apply to everyone on your team.
+    </Card>
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `title / description` | `ReactNode` | Optional heading and supporting content. |
+| `children / footer` | `ReactNode` | Main content and optional separated footer. |
+| `className` | `string` | Extra classes on the card wrapper. |

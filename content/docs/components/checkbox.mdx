@@ -1,0 +1,30 @@
+---
+title: Checkbox
+description: "A checkbox for an independent selection or agreement."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="checkbox" />
+
+## Usage
+
+```tsx
+import { Checkbox } from "higgyui";
+
+export function Example() {
+  return (
+    <Checkbox label="Email notifications" name="notifications" description="Send an email when someone mentions you." defaultChecked />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Visible checkbox label. Required. |
+| `description` | `string` | Supporting text connected to the control. |
+| `Native input props` | `ComponentProps` | Supports name, checked, defaultChecked, onChange, required, and disabled. |

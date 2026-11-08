@@ -1,0 +1,30 @@
+---
+title: Avatar
+description: "A circular avatar that falls back to initials."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="avatar" />
+
+## Usage
+
+```tsx
+import { Avatar } from "higgyui";
+
+export function Example() {
+  return (
+    <Avatar name="Jordan Lee" size="md" />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `name` | `string` | Accessible name and source of the initials. |
+| `src` | `string` | Optional image URL. |
+| `size` | `"sm", "md", or "lg"` | Defaults to md. |

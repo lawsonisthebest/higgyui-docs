@@ -1,0 +1,35 @@
+---
+title: Select
+description: "A labeled native dropdown for choosing one option."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="select" />
+
+## Usage
+
+```tsx
+import { Select } from "higgyui";
+
+export function Example() {
+  return (
+    <Select label="Visibility" name="visibility" defaultValue="team" options={[
+      { value: "private", label: "Private" },
+      { value: "team", label: "Team" },
+      { value: "public", label: "Public" },
+    ]} />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Visible field label. Required. |
+| `options` | `{ value, label, disabled? }[]` | Available choices. |
+| `description / error` | `string` | Supporting or validation text. |
+| `Native select props` | `ComponentProps` | Supports name, value, defaultValue, onChange, and disabled. |

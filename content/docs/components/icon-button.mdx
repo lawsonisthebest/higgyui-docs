@@ -1,0 +1,33 @@
+---
+title: IconButton
+description: "A labeled, icon-only button for compact actions."
+---
+
+import { ComponentPreview } from "@/components/previews/component-preview";
+
+## Preview
+
+<ComponentPreview name="icon-button" />
+
+## Usage
+
+```tsx
+import { IconButton } from "higgyui";
+import { Settings } from "lucide-react";
+
+export function Example() {
+  return (
+    <IconButton label="Open settings" icon={Settings} variant="outline" />
+  );
+}
+```
+
+## Props
+
+| Prop | Type | Details |
+| --- | --- | --- |
+| `label` | `string` | Accessible name and default tooltip. Required. |
+| `icon` | `LucideIcon` | Icon component. Required. |
+| `variant` | `"outline" or "ghost"` | Defaults to outline. |
+| `iconSize / iconThickness` | `number` | Default to 19 px and 1.5. |
+| `Native button props` | `ComponentProps` | Supports disabled, onClick, className, and other button props. Defaults to type=button. |

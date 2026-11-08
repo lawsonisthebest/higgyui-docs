@@ -1,5 +1,5 @@
 {
-  "name": "higgyui",
+  "name": "higgyui-docs",
   "version": "0.0.45",
   "private": true,
   "scripts": {
@@ -7,13 +7,18 @@
     "dev": "next dev",
     "start": "next start",
     "types:check": "next typegen && tsc --noEmit",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:ui": "npm --prefix ../../higgyui run build && node scripts/pack-ui.mjs",
+    "predev": "npm run build:ui",
+    "prebuild": "npm run build:ui",
+    "dev:local": "npm run build:ui && node scripts/dev-local.mjs"
   },
   "dependencies": {
     "cn": "^0.4.0",
     "fumadocs-core": "16.17.3",
     "fumadocs-mdx": "15.4.7",
     "fumadocs-ui": "npm:@fumadocs/base-ui@16.17.3",
+    "higgyui": "file:../../higgyui",
     "lucide-react": "^1.50.0",
     "next": "16.3.8",
     "react": "^19.3.0",
@@ -25,10 +30,10 @@
     "@types/node": "^26.6.4",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.3.8",
     "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
-    "typescript": "^7.0.2",
-    "eslint": "^9.39.4",
-    "eslint-config-next": "16.3.8"
+    "typescript": "^7.0.2"
   }
 }
