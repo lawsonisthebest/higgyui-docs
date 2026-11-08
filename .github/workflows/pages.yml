@@ -38,10 +38,10 @@ jobs:
             higgyui/package-lock.json
             docs/site/package-lock.json
       - name: Install library dependencies
-        run: npm ci
+        run: npm install --no-audit --no-fund
         working-directory: higgyui
       - name: Install docs dependencies
-        run: npm ci
+        run: npm install --no-audit --no-fund
         working-directory: docs/site
       - name: Build and export docs
         run: npm run build

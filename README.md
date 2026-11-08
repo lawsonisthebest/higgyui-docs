@@ -12,9 +12,9 @@ Use Node.js 24 and clone both repositories in the layout below. The docs app lin
 git clone https://github.com/lawsonisthebest/higgyui.git
 git clone https://github.com/lawsonisthebest/higgyui-docs.git higgyui-docs/higgyui
 cd higgyui
-npm ci
+npm install
 cd ../higgyui-docs/higgyui
-npm ci
+npm install
 npm run dev
 ```
 
